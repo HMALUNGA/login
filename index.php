@@ -6,6 +6,9 @@
 
  if(isset($_POST['logar'])):
     $erros=array();
+    if(!filter_input(INPUT_POST,'usuario',FILTER_VALIDATE_EMAIL)):
+    	     $erros[]="Email invalido";
+    	  else:
    $usuario=mysqli_escape_string($conexao,$_POST['usuario']);
    $senha=mysqli_escape_string($conexao,$_POST['senha']);
    if(empty($usuario) || empty($senha)):
@@ -33,8 +36,9 @@
 
     	endif;
 
- 	
+ 	  endif;
  endif;
+
 
 ?>
 <!DOCTYPE html>

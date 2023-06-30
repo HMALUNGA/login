@@ -37,7 +37,7 @@ require_once 'conexao.php';
 <body>
 	<header>
 		<h1>Pagina Inicial</h1>
-		<p>Seja bem vindo <?php echo " ".$dados['nome']; ?> <a href="sair.php">Sair</a></p>
+		<p>Seja bem vindo <?php echo " ".$dados['usuario']; ?> <a href="sair.php">Sair</a></p>
 		
 	</header>
 
