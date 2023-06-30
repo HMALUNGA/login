@@ -1,0 +1,16 @@
+*{padding: 0; margin: 0;font-size: 100%;font-family: sans;box-sizing: border-box;color: #fff; }
+a{ background-color: transparent; text-decoration: none; transition-property: all;transition-duration: .2s;transition-timing-function: ease; cursor: pointer;}
+/*HEADER*/
+header{
+	width: 100vw;
+	height: 10vh;
+	background-color: #6699FF;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+header h1{margin-left: 2rem; text-shadow: 1px -1px #666; font-size: 1.5rem;}
+header p{display: flex; flex-direction: row;justify-content: flex-end; align-items: center; text-shadow: 1px -1px #666; font-size: 1.5rem;}
+header p a{padding: .3rem 2rem; border-radius: .5rem; border: .05rem solid #fff; margin-left: 2rem;margin-right: 2rem; transition: all 1s ease-in-out;}
+header p a:hover{border-top-color:#6699FF ; border-left-color:#6699FF;border-right-color: #6699FF;border-radius:0;}
