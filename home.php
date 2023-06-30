@@ -1,3 +1,31 @@
+<?php
+//conexao
+require_once 'conexao.php';
+//iniciar a sessao
+ session_start();
+
+ //validacao para ao acesso a area restrita
+ if(!isset($_SESSION['logado'])):
+ 	header('Location:index.php');
+ endif;
+
+
+
+
+
+
+ 
+ $id=$_SESSION['id'];
+
+ $sql="SELECT * FROM usuario WHERE id='$id'";
+ $resultado=mysqli_query($conexao,$sql);
+ $dados=mysqli_fetch_array($resultado);
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +37,7 @@
 <body>
 	<header>
 		<h1>Pagina Inicial</h1>
-		<p>Seja bem vindo, nome@gamil.com <a href="index.php">Sair</a></p>
+		<p>Seja bem vindo <?php echo " ".$dados['nome']; ?> <a href="sair.php">Sair</a></p>
 		
 	</header>
 
